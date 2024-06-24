@@ -1,0 +1,15 @@
+{
+  "name": "ds",
+  "version": "1.0.0",
+  "description": "This package contains various implementation of various datastructures",
+  "main": "index.js",
+  "scripts": {
+      "test": "node --test",
+      "dev": "node demo.js"
+  },
+  "keywords": [
+    "ds"
+  ],
+  "author": "Sanket Pargaonkar",
+  "license": "ISC"
+}
