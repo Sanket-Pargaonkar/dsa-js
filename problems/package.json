@@ -1,0 +1,15 @@
+{
+  "name": "problems",
+  "version": "1.0.0",
+  "description": "This repo contains all the solutions to dsa problems from cometitive websites and company interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "problems",
+    "leetcode"
+  ],
+  "author": "Sanket Pargaonkar",
+  "license": "ISC"
+}
