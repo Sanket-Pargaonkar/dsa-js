@@ -1,0 +1,16 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "description": "This package will contain all the algorithms for linear, nonlinear and other datastructures",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "algo",
+    "algorithms",
+    "js"
+  ],
+  "author": "Sanket Pargaonkar",
+  "license": "ISC"
+}
