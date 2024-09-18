@@ -2,6 +2,7 @@ const dynamicArray = require( './linear-ds/dynamic-array');
 const { stdout } = require('process');
 
 
+
 function demoDynamicArray(){
     let a = dynamicArray();
 
@@ -14,6 +15,8 @@ function demoDynamicArray(){
     stdout.write('1 Element popped');
     stdout.write('\n')
     a.print();
+    stdout.write(a.length());
+    stdout.write('\n')    
 }
 
 demoDynamicArray();

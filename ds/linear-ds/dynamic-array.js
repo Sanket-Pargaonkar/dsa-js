@@ -19,6 +19,18 @@ function dynamicArray(){
 	pop: function(){
 	    arr.pop();
 	},
+	delete: function(pos){
+	    arr.splice(pos, 1);
+	},
+	update: function(pos, val){
+	    arr[pos] = val;
+	},
+	sort: function(){
+	    arr.sort();
+	},
+	search: function(val){
+	    return arr.includes(val);
+	},
 	length: function(){return arr.length},
     }
 }
