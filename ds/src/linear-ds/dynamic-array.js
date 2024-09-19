@@ -17,7 +17,7 @@ function dynamicArray(){
 	    }
 	},
 	pop: function(){
-	    arr.pop();
+	    return arr.pop();
 	},
 	delete: function(pos){
 	    arr.splice(pos, 1);
