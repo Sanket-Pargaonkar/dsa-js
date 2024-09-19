@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
       "test": "node --test",
+      "test:specific" : "node --test --test-name-pattern ",
       "test:report": "node --test --test-reporter spec",
       "dev": "node demo.js"
   },
