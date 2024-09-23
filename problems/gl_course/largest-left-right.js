@@ -57,7 +57,49 @@ solutions.defaultSolution = function (data) {
 
 }
 
-solutions.optimisedSolutiion = function(data){};
+solutions.optimisedSolution = function (data) {
+	// build left max arr
+
+	let ct = 0, larr = [], mx = data[0];
+	while (ct < data.length) {
+
+		if (data[ct] > mx) {
+			mx = data[ct]
+		}
+		larr[ct] = mx
+		ct++
+	}
+	// compawre and update it and print
+	ct = 0
+	while (ct < data.length) {
+
+		if (data[ct] == larr[ct]) {
+			larr[ct] = -1
+		}
+		ct++
+	}
+	console.log('larr : ', larr)
+	// build rt max arr
+	let rarr = []
+	ct = data.length - 1, mx = data[data.length - 1]
+	while (ct >= 0) {
+		if (data[ct] > mx) {
+			mx = data[ct]
+		}
+		rarr[ct] = mx
+		ct--
+	}
+
+	// compawre and update it and print
+	ct = 0
+	while (ct < data.length ) {
+	    if (data[ct] == rarr[ct]) {
+			rarr[ct] = -1
+		}
+		ct++
+	}
+	console.log('rarr : ', rarr)
+};
 exec.solutions = solutionsFactory(solutions)
 
 module.exports = { largest_lr: exec };
