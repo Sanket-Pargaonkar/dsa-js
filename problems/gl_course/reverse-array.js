@@ -15,4 +15,16 @@ sols.defaultSolution = function (data) {
 
 	console.log('reversed array: ', data)
 }
+sols.twoPointerSolution = function (data) {
+	console.log('original array: ', data)
+    let st = 0, end =  data.length -1
+	while (st < end ) {
+		let t = data[st];
+		data[i] = data[end]
+		data[end] = t;
+	    st++, end--
+	}
+
+	console.log('reversed array: ', data)
+}
 module.exports = { reverse_array: exportSolutions(sols) }
