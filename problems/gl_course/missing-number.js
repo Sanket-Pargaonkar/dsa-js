@@ -1,10 +1,5 @@
-const strategyPattern = require('../utils/strategyPattern');
-const { createPrototypeSolution, solutionsFactory } = require('../utils/solutionsFactory');
-
-function exec(array, solution) {
-	return strategyPattern(array, solution, solutions.defaultSolution);;
-}
-
+const { createPrototypeSolution } = require('../utils/solutionsFactory');
+const exportSolutions = require('../utils/export-uitil')
 const solutions = createPrototypeSolution()
 solutions.defaultSolution = function (data) {
 	let full_arr = [];
@@ -34,5 +29,4 @@ solutions.optimisedSolution = function (arr) {
 	}
 	return sum_full - sum_arr
 }
-exec.solutions = solutionsFactory(solutions);
-module.exports = { missing_num: exec };
+module.exports = { missing_num: exportSolutions(solutions)  };

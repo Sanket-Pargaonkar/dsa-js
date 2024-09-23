@@ -1,9 +1,5 @@
-const strategyPattern = require('../utils/strategyPattern');
-const { createPrototypeSolution, solutionsFactory } = require('../utils/solutionsFactory');
-
-function exec(array, solution) {
-	return strategyPattern(array, solution, solutions.defaultSolution);
-}
+const { createPrototypeSolution } = require('../utils/solutionsFactory');
+const exportSolutions = require('../utils/export-uitil')
 const solutions = createPrototypeSolution()
 solutions.defaultSolution = function (data) {
 	let count = 0;
@@ -100,6 +96,5 @@ solutions.optimisedSolution = function (data) {
 	}
 	console.log('rarr : ', rarr)
 };
-exec.solutions = solutionsFactory(solutions)
 
-module.exports = { largest_lr: exec };
+module.exports = { largest_lr: exportSolutions(solutions) };
