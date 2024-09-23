@@ -2,8 +2,9 @@ const strategyPattern = require('../utils/strategyPattern');
 const { createPrototypeSolution, solutionsFactory } = require('../utils/solutionsFactory');
 
 function exec(array, solution) {
-	return strategyPattern(array, solution, solutions.defaultSolution)
+	return strategyPattern(array, solution, solutions.defaultSolution);;
 }
+
 const solutions = createPrototypeSolution()
 solutions.defaultSolution = function (data) {
 	let full_arr = [];
@@ -28,9 +29,10 @@ solutions.optimisedSolution = function (arr) {
 	while (count < arr.length + 1) {
 		if (count < arr.length)
 			sum_arr += arr[count];
-	    sum_full += count+1;
-	    count++
+		sum_full += count + 1;
+		count++
 	}
 	return sum_full - sum_arr
 }
-module.exports = { solutions: solutionsFactory(solutions), exec };
+exec.solutions = solutionsFactory(solutions);
+module.exports = { missing_num: exec };
