@@ -13,7 +13,7 @@ sol.defaultSolution = (data) => {
 	console.log('Max diff ', data, defSol(data))
 }
 function defSol(data) {
-    let md = data[0] - data[1]
+	let md = data[0] - data[1]
 	for (let i = 2; i < data.length; i++) {
 		if (data[0] - data[i] > md) {
 			md = data[0] - data[i]
