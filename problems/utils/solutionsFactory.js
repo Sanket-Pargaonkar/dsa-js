@@ -39,12 +39,43 @@ const createPrototypeSolution = function () {
 			},
 			configurable: false,
 			enumerable: false
+		}, level: {
+			configurable: false,
+			enumerable: false,
+			set(val) {
+				if (!Object.values(TAG_ENUM).includes(val)) {
+					throw new Error('Tag must one of the follwoing symbols from property solutions.leveltag: ' + Object.keys(TAG_ENUM))
+				}
+				level = val
+			},
+			get() {
+				return level
+			}
+
+		},
+		levelTag: {
+
+			value: TAG_ENUM,
+			writable: false,
+			configurable: false,
+			enumerable: false
+		},
+		url: {
+
+			value: '',
+			writable: true,
+			configurable: false,
+			enumerable: false
 		}
-		    
+
 	});
 
 }
-let a = createPrototypeSolution();
-a.problemStatement = "asdf";
-console.log(a)
+
+const TAG_ENUM = Object.freeze({
+	EASY: Symbol('EASY'),
+	MEDIUM: Symbol('MEDIUM'),
+	HARD: Symbol('HARD')
+})
+
 module.exports = { createPrototypeSolution, solutionsFactory }
