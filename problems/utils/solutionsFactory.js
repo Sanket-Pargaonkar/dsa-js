@@ -75,7 +75,8 @@ const createPrototypeSolution = function () {
 const TAG_ENUM = Object.freeze({
 	EASY: Symbol('EASY'),
 	MEDIUM: Symbol('MEDIUM'),
-	HARD: Symbol('HARD')
+	HARD: Symbol('HARD'),
+	ARR: Symbol('ARRAY')
 })
 
 module.exports = { createPrototypeSolution, solutionsFactory }
