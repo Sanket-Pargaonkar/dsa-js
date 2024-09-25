@@ -4,6 +4,7 @@ const exp = require('../utils/export-uitil')
 const sols = createPrototypeSolution();
 // [ 1 2 3 4 5 ] 2
 sols.ulr = 'https://leetcode.com/problems/rotate-array/description/'
+sols.level = sols.levelTag.MEDIUM
 sols.defaultSolution = function (_data) {
 	let data = _data.data,
 		k = _data.k
