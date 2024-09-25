@@ -5,6 +5,7 @@ const { array_max_diff } = require('./gl_course/array-max-diff')
 const { largest_n  } = require('./geeksforgeeks/largest-n')
 const {secondL} = require('./geeksforgeeks/second-largest')
 const { isArrSorted} = require('./leetcode/isArrSorted')
+const { rmDupesSorted} = require('./leetcode/rm-dupes-sorted')
 
 // console.log(missing_num([1,2,4,5]));
 // console.log(missing_num([1,2,4,5],missing_num.solutions.optimisedSolution ));
@@ -24,4 +25,5 @@ console.log('isArrSorted  : ',[7, 1, 5, 3, 6, 4] ,isArrSorted([7, 1, 5, 3, 6, 4]
 console.log('isArrSorted  : ',[7, 5, 4] ,isArrSorted([7, 5, 4]))
 console.log('isArrSorted  : ',[7, 5, 5, 4] ,isArrSorted([7, 5, 5, 4]))
 console.log('isArrSorted  : ',[7, 5, 5, 6] ,isArrSorted([7, 5, 5, 6]))
-
+data = [1,2,3,3,4,5,6,6,7,8]
+console.log('rm dupes leetcode :', data, rmDupesSorted(data))
