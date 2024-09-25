@@ -6,14 +6,20 @@
 // const {secondL} = require('./geeksforgeeks/second-largest')
 // const { isArrSorted} = require('./leetcode/isArrSorted')
 // const { rmDupesSorted} = require('./leetcode/rm-dupes-sorted')
-const { rotateByK} = require('./leetcode/right-rotate-arr')
-const {leftRotateByK } = require('./leetcode/left-rotate-arr')
-data = [1,2,3,4,5]
-console.log('righrotate by 3', data)
-console.log( rotateByK({data, k:1}))
-data = [1,2,3,4,5]
-console.log('left rotate by 3', data)
-console.log( leftRotateByK({data, k:5}))
+// const { rotateByK} = require('./leetcode/right-rotate-arr')
+// const {leftRotateByK } = require('./leetcode/left-rotate-arr')
+const { moveZerosToEnd} = require('./leetcode/move-zeros')
+
+data = [1,0,3,0,5]
+console.log('moving 0s tpo end ', data)
+console.log(moveZerosToEnd(data))
+
+// data = [1,2,3,4,5]
+// console.log('righrotate by 3', data)
+// console.log( rotateByK({data, k:1}))
+// data = [1,2,3,4,5]
+// console.log('left rotate by 3', data)
+// console.log( leftRotateByK({data, k:5}))
 
 // console.log(missing_num([1,2,4,5]));
 // console.log(missing_num([1,2,4,5],missing_num.solutions.optimisedSolution ));
