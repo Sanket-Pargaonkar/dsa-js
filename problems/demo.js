@@ -8,11 +8,15 @@
 // const { rmDupesSorted} = require('./leetcode/rm-dupes-sorted')
 // const { rotateByK} = require('./leetcode/right-rotate-arr')
 // const {leftRotateByK } = require('./leetcode/left-rotate-arr')
-const { moveZerosToEnd} = require('./leetcode/move-zeros')
+// const { moveZerosToEnd} = require('./leetcode/move-zeros')
+const { arrUnion } = require('./geeksforgeeks/arr-union')
+data = [[1,0,3],[1,0,3,0,5]]
+console.log('union of arr: ', data)
+console.log(arrUnion(data))
 
-data = [1,0,3,0,5]
-console.log('moving 0s tpo end ', data)
-console.log(moveZerosToEnd(data))
+// data = [1,0,3,0,5]
+// console.log('moving 0s tpo end ', data)
+// console.log(moveZerosToEnd(data))
 
 // data = [1,2,3,4,5]
 // console.log('righrotate by 3', data)
