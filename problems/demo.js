@@ -1,16 +1,19 @@
- const { missing_num   } = require('./gl_course/missing-number'); // 
-const { largest_lr   } = require('./gl_course/largest-left-right');
-const {reverse_array } = require('./gl_course/reverse-array')
-const { array_max_diff } = require('./gl_course/array-max-diff')
-const { largest_n  } = require('./geeksforgeeks/largest-n')
-const {secondL} = require('./geeksforgeeks/second-largest')
-const { isArrSorted} = require('./leetcode/isArrSorted')
-const { rmDupesSorted} = require('./leetcode/rm-dupes-sorted')
+//  const { missing_num   } = require('./gl_course/missing-number'); // 
+// const { largest_lr   } = require('./gl_course/largest-left-right');
+// const {reverse_array } = require('./gl_course/reverse-array')
+// const { array_max_diff } = require('./gl_course/array-max-diff')
+// const { largest_n  } = require('./geeksforgeeks/largest-n')
+// const {secondL} = require('./geeksforgeeks/second-largest')
+// const { isArrSorted} = require('./leetcode/isArrSorted')
+// const { rmDupesSorted} = require('./leetcode/rm-dupes-sorted')
 const { rotateByK} = require('./leetcode/right-rotate-arr')
-
+const {leftRotateByK } = require('./leetcode/left-rotate-arr')
 data = [1,2,3,4,5]
 console.log('righrotate by 3', data)
 console.log( rotateByK({data, k:1}))
+data = [1,2,3,4,5]
+console.log('left rotate by 3', data)
+console.log( leftRotateByK({data, k:5}))
 
 // console.log(missing_num([1,2,4,5]));
 // console.log(missing_num([1,2,4,5],missing_num.solutions.optimisedSolution ));
