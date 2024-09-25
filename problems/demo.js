@@ -9,10 +9,11 @@
 // const { rotateByK} = require('./leetcode/right-rotate-arr')
 // const {leftRotateByK } = require('./leetcode/left-rotate-arr')
 // const { moveZerosToEnd} = require('./leetcode/move-zeros')
-const { arrUnion } = require('./geeksforgeeks/arr-union')
-data = [[1,0,3],[1,0,3,0,5]]
-console.log('union of arr: ', data)
-console.log(arrUnion(data))
+// const { arrUnion } = require('./geeksforgeeks/arr-union')
+const { findMissingNum} = require('./leetcode/find-missing-num')
+data = [1,0,3,0,5]
+console.log('Missing Num arr: ', data)
+console.log(findMissingNum(data))
 
 // data = [1,0,3,0,5]
 // console.log('moving 0s tpo end ', data)
