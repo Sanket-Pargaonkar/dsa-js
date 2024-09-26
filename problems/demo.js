@@ -11,11 +11,15 @@
 // const { moveZerosToEnd} = require('./leetcode/move-zeros')
 // const { arrUnion } = require('./geeksforgeeks/arr-union')
 // const { findMissingNum} = require('./leetcode/find-missing-num')
-const { findMaxConsequitiveOnes}= require('./leetcode/max-consequtive-ones')
+// const { findMaxConsequitiveOnes}= require('./leetcode/max-consequtive-ones')
+const { findSingkleNum } = require('./leetcode/single-number')
+data = [1,0,1,2,0]
+console.log('DSingle Num in arr: ', data)
+console.log(findSingkleNum(data))
 
-data = [1,0,1,1,3,0,5]
-console.log('Max Consequitive ones in arr: ', data)
-console.log(findMaxConsequitiveOnes(data))
+// data = [1,0,1,1,3,0,5]
+// console.log('Max Consequitive ones in arr: ', data)
+// console.log(findMaxConsequitiveOnes(data))
 
 // data = [1,0,3,0,5]
 // console.log('Missing Num arr: ', data)
