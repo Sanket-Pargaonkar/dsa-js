@@ -1,9 +1,11 @@
 const { createPrototypeSolution } = require('../utils/solutionsFactory');
 const exp = require('../utils/export-uitil')
+const tags = require('../utils/tags')
 
 const sols = createPrototypeSolution();
 
 sols.ulr = 'https://leetcode.com/problems/remove-duplicates-from-sorted-array/description'
+sols.level = tags.EASY
 sols.defaultSolution = function (data) {
 	for (let i = 0; i < data.length - 1; i++) {
 		// check current and next element

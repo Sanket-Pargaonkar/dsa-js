@@ -1,7 +1,11 @@
 const { createPrototypeSolution } = require('../utils/solutionsFactory');
 const exp = require('../utils/export-uitil')
+const tags = require('../utils/tags')
 
 const sols = createPrototypeSolution();
+sols.level =  tags.EASY
+sols.tags = tags.ARR
+
 sols.problemStatement = `
 Given an array, arr. The task is to find the largest element in it.
 
@@ -36,7 +40,5 @@ function findMax(data) {
 	return max
 
 }
-
-sols.level = sols.levelTag.EASY
 
 module.exports = {largest_n: exp(sols)}

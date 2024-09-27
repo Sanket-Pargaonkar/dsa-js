@@ -1,10 +1,15 @@
 const { createPrototypeSolution } = require('../utils/solutionsFactory');
 const exp = require('../utils/export-uitil')
+const tags = require('../utils/tags')
+
 
 const sols = createPrototypeSolution();
+sols.level =  tags.EASY
+sols.tags = tags.ARR
+
 
 sols.ulr = 'https://leetcode.com/problems/single-number/description/'
-sols.level = sols.levelTag.EASY
+
 sols.defaultSolution = function (data) {
 	// take arr,
 	const dupes = [];

@@ -1,7 +1,12 @@
 const { createPrototypeSolution } = require('../utils/solutionsFactory');
 const exp = require('../utils/export-uitil')
+const tags = require('../utils/tags')
 
 const sols = createPrototypeSolution();
+sols.level =  tags.MEDIUM
+sols.tags = tags.ARR
+
+
 //[1 2 3 4 5 6] 2
 // 5 ->  length - pos  +1 5 - 5 
 // 4 ->  5-4

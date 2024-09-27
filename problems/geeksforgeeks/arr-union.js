@@ -1,5 +1,10 @@
 const { createPrototypeSolution } = require('../utils/solutionsFactory');
 const exp = require('../utils/export-uitil')
+const tags = require('../utils/tags')
+
+const sols = createPrototypeSolution();
+sols.level =  tags.EASY
+sols.tags = tags.ARR
 
 const sols = createPrototypeSolution();
 sols.url = 'https://www.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=union-of-two-sorted-arrays'
@@ -28,6 +33,5 @@ function exists(data, num) {
 	return false
 }
 
-sols.level = sols.levelTag.EASY
 
 module.exports = { arrUnion: exp(sols) }

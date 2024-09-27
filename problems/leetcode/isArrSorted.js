@@ -1,7 +1,11 @@
 const { createPrototypeSolution } = require('../utils/solutionsFactory');
 const exp = require('../utils/export-uitil')
+const tags = require('../utils/tags')
 
 const sols = createPrototypeSolution();
+sols.level =  tags.EASY
+sols.tags = tags.ARR
+
 
 sols.problemStatement = `Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
 

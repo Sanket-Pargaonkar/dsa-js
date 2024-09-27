@@ -1,7 +1,10 @@
 const { createPrototypeSolution} = require('../utils/solutionsFactory')
 const exp = require('../utils/export-uitil');
+const tags = require('../utils/tags')
 
 const sols = createPrototypeSolution();
+sols.level =  tags.EASY
+sols.tags = tags.ARR
 
 sols.problemStatement = `
 Given an array arr, return the second largest distinct element from an array. If the second largest element doesn't exist then return -1.
@@ -22,7 +25,6 @@ Constraints:
 1 ≤ arri ≤ 105
 `
 
-sols.level= sols.levelTag.EASY;
 sols.defaultSolution = function findSecondLargest(data){
     let l = data[0], sl = 0
     for(let i = 0; i< data.length; i++){

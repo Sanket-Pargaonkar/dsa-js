@@ -1,3 +1,5 @@
+const TAG_ENUM = require('./tags')
+
 function solutionsFactory(solutionsObj) {
 	if (!solutionsObj.hasOwnProperty('defaultSolution')) {
 		throw new Error("solutions object must have property: defaultSolution")
@@ -44,7 +46,7 @@ const createPrototypeSolution = function () {
 			enumerable: false,
 			set(val) {
 				if (!Object.values(TAG_ENUM).includes(val)) {
-					throw new Error('Tag must one of the follwoing symbols from property solutions.leveltag: ' + Object.keys(TAG_ENUM))
+					throw new Error('Tag must a valid synmbol from file: problems/utils/tags.js : ' + Object.keys(TAG_ENUM))
 				}
 				level = val
 			},
@@ -53,12 +55,19 @@ const createPrototypeSolution = function () {
 			}
 
 		},
-		levelTag: {
-
-			value: TAG_ENUM,
-			writable: false,
+		tags: {
 			configurable: false,
-			enumerable: false
+			enumerable: false,
+			set(val) {
+				if (!Object.values(TAG_ENUM).includes(val)) {
+					throw new Error('Tag must a valid synmbol from file: problems/utils/tags.js : ' + Object.keys(TAG_ENUM))
+				}
+				level = val
+			},
+			get() {
+				return level
+			}
+
 		},
 		url: {
 
@@ -66,17 +75,12 @@ const createPrototypeSolution = function () {
 			writable: true,
 			configurable: false,
 			enumerable: false
-		}
+		},
+
 
 	});
 
 }
 
-const TAG_ENUM = Object.freeze({
-	EASY: Symbol('EASY'),
-	MEDIUM: Symbol('MEDIUM'),
-	HARD: Symbol('HARD'),
-	ARR: Symbol('ARRAY')
-})
 
 module.exports = { createPrototypeSolution, solutionsFactory }
